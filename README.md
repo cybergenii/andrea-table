@@ -3,6 +3,8 @@
 [![npm version](https://badge.fury.io/js/andrea-table.svg)](https://badge.fury.io/js/andrea-table)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/derekzyl/andrea-table.svg)](https://github.com/derekzyl/andrea-table)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/andrea-table)](https://bundlephobia.com/package/andrea-table)
+[![npm downloads](https://img.shields.io/npm/dw/andrea-table)](https://www.npmjs.com/package/andrea-table)
 
 > A powerful, feature-rich React table component with advanced filtering, sorting, pagination, and CRUD operations.
 
@@ -28,6 +30,9 @@ yarn add andrea-table
 # or
 pnpm add andrea-table
 ```
+
+### Live Example
+Check out the [complete example implementation](https://github.com/cybergenii/andrea-table/tree/main/src/example/users) to see Andrea Table in action!
 
 ### Basic Usage
 
@@ -179,6 +184,9 @@ show: {
 ```
 
 ## 🎯 Examples
+
+### Live Demo
+👉 **[View Complete Example](https://github.com/cybergenii/andrea-table/tree/main/src/example/users)** - See Andrea Table in action with real data!
 
 ### Complete User Management Table
 
