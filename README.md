@@ -206,6 +206,30 @@ interface User {
     country: string;
   };
 }
+const AddressColumn: React.FC<ColumnElementT<User>> = ({ columnData }) => (
+  <div className="space-y-1">
+    <div className="font-medium">{columnData.address.street}</div>
+    <div className="text-sm text-gray-500">
+      {columnData.address.city}, {columnData.address.state}
+    </div>
+  </div>
+);
+
+const ActionColumn: React.FC<ColumnElementT<User>> = ({ columnData, onDeleteSuccess }) => (
+  <div className="flex gap-2">
+    <button onClick={() => editUser(columnData.id)} className="btn-primary">
+      Edit
+    </button>
+    <button onClick={() => deleteUser(columnData.id)} className="btn-danger">
+      Delete
+    </button>
+  </div>
+);
+
+const extraColumns: ColumnT<User>[] = [
+  { _address: <AddressColumn columnData={""} crud={{}} /> },
+  { action: <ActionColumn columnData={""} crud={{}} /> }
+];
 
 const userTableConfig: TableDataT<User> = {
   tableName: "User Management",
@@ -219,6 +243,7 @@ const userTableConfig: TableDataT<User> = {
     { key: "_address", name: "Address", canFilter: true },
     { key: "action", name: "Actions", canSort: false }
   ],
+extraColumns,
   fn: {
     fetchFn: async ({ url, baseUrl }) => {
       const response = await fetch(baseUrl + url);
